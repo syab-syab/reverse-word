@@ -13,7 +13,7 @@ const Title = styled.a`
 const Header = () => {
   return (
     <Wrapper>
-      <Title href='https://homemade-apps.vercel.app/' target='blank'>リバースワード</Title>
+      <Title href='https://homemade-apps.vercel.app/' target='blank'>ワードリバース</Title>
     </Wrapper>
   )
 }
