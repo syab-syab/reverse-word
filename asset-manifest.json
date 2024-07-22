@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reverse-word/static/css/main.bb887869.css",
+    "main.js": "/reverse-word/static/js/main.f46f5a57.js",
+    "static/js/453.8120d080.chunk.js": "/reverse-word/static/js/453.8120d080.chunk.js",
+    "index.html": "/reverse-word/index.html",
+    "main.bb887869.css.map": "/reverse-word/static/css/main.bb887869.css.map",
+    "main.f46f5a57.js.map": "/reverse-word/static/js/main.f46f5a57.js.map",
+    "453.8120d080.chunk.js.map": "/reverse-word/static/js/453.8120d080.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb887869.css",
+    "static/js/main.f46f5a57.js"
+  ]
+}
