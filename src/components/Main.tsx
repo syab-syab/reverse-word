@@ -55,6 +55,11 @@ const BtnBlock = styled.div`
   background: #E1F3DD;
   padding: 1rem 0;
   font-weight: bold;
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background: #538392;
+  }
 `
 
 export const Main = () => {
@@ -91,7 +96,6 @@ export const Main = () => {
         <BtnBlock onClick={() => setWord("")}>クリア</BtnBlock>
         <BtnBlock onClick={() => copyReverseWord(wordReverse(word))}>コピー</BtnBlock>
       </BtnWrapper>
-
     </Wrapper>
   )
 }
