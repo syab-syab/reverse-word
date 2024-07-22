@@ -3,28 +3,58 @@ import styled from 'styled-components'
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 const Wrapper = styled.main`
-  padding: 1rem;
+  padding: 5rem;
   background: #538392;
+  height: 100vh;
+  @media (max-width: 700px) {
+    padding: 2rem 5rem;
+  }
+`
+
+const InputWrapper = styled.div`
+  display: flex;
+  margin-top: 5rem;
+  @media (max-width: 700px) {
+    display: block;
+  }
 `
 
 const Input = styled.input`
+  flex-grow: 1;
   background: #E1F3DD;
-  font-size: 4rem;
+  height: 5rem;
+  font-size: 2.5rem;
+  width: 100%;
   text-align: center;
-  display: inline-block;
 `
 
 // モバイル表示で回転させる
 // 矢印の位置がおかしくなる問題を解決する
-const ArrowMark = styled.span`
-  display: inline-block;
-  font-size: 5rem;
+const ArrowMark = styled.div`
+  flex-grow: 1;
   font-weight: bold;
+  height: auto;
   margin: 0 2rem;
+  font-size: 3rem;
   @media (max-width: 700px) {
     display: block;
     transform: rotate(90deg);
   }
+`
+
+const BtnWrapper = styled.div`
+  display: flex;
+  margin-top: 7rem;
+`
+
+const BtnBlock = styled.div`
+  flex-grow: 1;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 0.1rem solid black;
+  background: #E1F3DD;
+  padding: 1rem 0;
+  font-weight: bold;
 `
 
 export const Main = () => {
@@ -49,13 +79,18 @@ export const Main = () => {
   }
   return (
     <Wrapper>
-      <Input type="text" value={word} onChange={toggleWord} />
-      <ArrowMark>
-        <DoubleArrowIcon />
-      </ArrowMark>
-      <Input type="text" defaultValue={wordReverse(word)} readOnly />
-      <p onClick={() => setWord("")}>delete</p>
-      <p onClick={() => copyReverseWord(wordReverse(word))}>Copy</p>
+      <InputWrapper>
+        <Input type="text" value={word} onChange={toggleWord} />
+        <ArrowMark>
+          <DoubleArrowIcon />
+        </ArrowMark>
+        <Input type="text" defaultValue={wordReverse(word)} readOnly />      
+      </InputWrapper>
+
+      <BtnWrapper>
+        <BtnBlock onClick={() => setWord("")}>クリア</BtnBlock>
+        <BtnBlock onClick={() => copyReverseWord(wordReverse(word))}>コピー</BtnBlock>
+      </BtnWrapper>
 
     </Wrapper>
   )
